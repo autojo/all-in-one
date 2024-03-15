@@ -1,0 +1,9 @@
+[submodule "roles/ansible-role-k3s"]
+	path = roles/ansible-role-k3s
+	url = https://github.com/autojo/ansible-role-k3s
+[submodule "roles/ol-k3s-prep"]
+	path = roles/ol-k3s-prep
+	url = https://github.com/autojo/ol-k3s-prep
+[submodule "roles/install-dashboard-nfs-awx"]
+	path = roles/install-dashboard-nfs-awx
+	url = https://github.com/autojo/install-dashboard-nfs-awx
