@@ -23,7 +23,7 @@ k3s
   remote_user: '{{ cfgsvc_pb_remote_user | default("root") }}'
   become: true
   vars:
-    # webserver: 'http://bastion.my.lab/k3s'
+    webserver: 'http://webserver.my.domain:8080/k3s'
 
 # vars for prepare role
     k3s_allow_os_upgrade: false
