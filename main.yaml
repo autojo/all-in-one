@@ -55,21 +55,26 @@
 
     k3s_dashboard_helm_chart: kubernetes-dashboard-7.1.2.tgz
     k3s_nfs_provisioner_helm_chart: nfs-subdir-external-provisioner-4.0.18.tgz
-    k3s_awx_operator_helm_chart: awx-operator-2.10.0.tgz
+    k3s_awx_operator_helm_chart: awx-operator-2.12.2.tgz
 
     state: present
 
+    ingress_hosts_dashboard: dashboard.my.lab
+
     instance_name: awx-test
     awx_replicas: 1
+    
+    auto_upgrade: true
 
     service_type: ClusterIP
 
     ingress_type: ingress
-    ingress_hosts: awx-demo.localhost
+    ingress_tls_secret: tls-secret
+    ingress_hosts_awx: awx.my.lab
     ingress_path: /
     ingress_path_type: Prefix
 
-    ipv6_disabled: true
+    # ipv6_disabled: true
 
     projects_persistence: true
     projects_storage_class: nfs-client
